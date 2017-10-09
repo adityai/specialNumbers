@@ -29,6 +29,9 @@ def main():
 		if (isPerfectSquare(int(sys.argv[1]))):
 			print(sys.argv[1] + " is a perfect square")
 
+		if isFibonacci(int(sys.argv[1])):
+			print(sys.argv[1] + " is a number in the Fibonacci sequence")
+
 def isPrime(n):
     if n==2 or n==3: return True
     if n%2==0 or n<2: return False
@@ -68,5 +71,10 @@ def findGoldenBefore(n):
 
 def isPerfectSquare(n):
 	return float(n**0.5).is_integer();
+
+def isFibonacci(n):
+    phi = 0.5 + 0.5 * math.sqrt(5.0)
+    a = phi * n
+    return n == 0 or abs(round(a) - a) < 1.0 / n
 
 main()
