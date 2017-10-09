@@ -11,8 +11,10 @@ def main():
 			print(sys.argv[1] + " is Prime")
 			if (isMersennePrime(int(sys.argv[1]))):
 				print(sys.argv[1] + " is Mersenne Prime")
+				
 		if (isPerfectNumber(int(sys.argv[1]))):
 			print(sys.argv[1] + " is Perfect")
+			
 		if (isNarcissisticNumber(sys.argv[1])):
 			print(sys.argv[1] + " is Narcissistic")
 
@@ -24,6 +26,8 @@ def main():
 		if (float(goldenNumberBefore).is_integer()):
 			print("Nearly whole golden ratio " + sys.argv[1] + " : " + goldenNumberAfter)
 
+		if (isPerfectSquare(int(sys.argv[1]))):
+			print(sys.argv[1] + " is a perfect square"
 
 def isPrime(n):
     if n==2 or n==3: return True
@@ -61,5 +65,8 @@ def findGoldenAfter(n):
 
 def findGoldenBefore(n):
 	return float(n) / 1.618
+
+def isPerfectSquare(n):
+	return float(n**0.5).is_integer();
 
 main()
