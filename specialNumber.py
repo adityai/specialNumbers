@@ -27,7 +27,7 @@ def main():
 			print("Nearly whole golden ratio " + sys.argv[1] + " : " + goldenNumberAfter)
 
 		if (isPerfectSquare(int(sys.argv[1]))):
-			print(sys.argv[1] + " is a perfect square"
+			print(sys.argv[1] + " is a perfect square")
 
 def isPrime(n):
     if n==2 or n==3: return True
