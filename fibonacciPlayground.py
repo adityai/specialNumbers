@@ -4,44 +4,18 @@ import sys
 import scipy
 
 def main():
-	if len(sys.argv) <= 1:
-		i = 1
-		print("Searching for perfect fibonacci numbers:")
-		while i > 0:
-			if (isFibonacci(i)):
-				print(i)
-				f = open("fibonacci.txt", "a+")
-				f.write(str(i) + "\n")
-				if (isPerfect(i)):
-					print("Perfect Fibonacci:" + i)
-					f.write("Perfect Fibonacci:" + str(i) + "\n")
-				f.close()
-			i = i + 1
-	else:
-		if (isPrime(int(sys.argv[1]))):
-			print(sys.argv[1] + " is Prime")
-			if (isMersennePrime(int(sys.argv[1]))):
-				print(sys.argv[1] + " is Mersenne Prime")
-				
-		if (isPerfect(int(sys.argv[1]))):
-			print(sys.argv[1] + " is Perfect")
-			
-		if (isNarcissistic(sys.argv[1])):
-			print(sys.argv[1] + " is Narcissistic")
-
-		goldenNumberBefore = str(findGoldenBefore(int(sys.argv[1])))
-		goldenNumberAfter = str(findGoldenAfter(int(sys.argv[1])))
-		print("Golden ratio " +  goldenNumberBefore + " : " + sys.argv[1] + " : " + goldenNumberAfter)
-		if (float(goldenNumberBefore).is_integer()):
-			print("Nearly whole golden ratio " + goldenNumberBefore + " : " + sys.argv[1])
-		if (float(goldenNumberBefore).is_integer()):
-			print("Nearly whole golden ratio " + sys.argv[1] + " : " + goldenNumberAfter)
-
-		if (isPerfectSquare(int(sys.argv[1]))):
-			print(sys.argv[1] + " is a perfect square")
-
-		if isFibonacci(int(sys.argv[1])):
-			print(sys.argv[1] + " is a number in the Fibonacci sequence")
+	i = 1
+	print("Searching for perfect fibonacci numbers:")
+	while i > 0:
+		if (isFibonacci(i)):
+			print(i)
+			f = open("fibonacci.txt", "a+")
+			f.write(str(i) + "\n")
+			if (isPerfect(i)):
+				print("Perfect Fibonacci:" + i)
+				f.write("Perfect Fibonacci:" + str(i) + "\n")
+			f.close()
+		i = i + 1
 
 def isPrime(n):
     if n==2 or n==3: return True
