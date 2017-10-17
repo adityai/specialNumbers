@@ -4,7 +4,7 @@ import sys
 import scipy
 
 def main():
-	i = 1
+	i = 863464296
 	print("Searching for perfect fibonacci numbers:")
 	while i > 0:
 		if (isFibonacci(i)):
