@@ -6,7 +6,7 @@ import redis
 import requests
 
 def main():
-	r = redis.StrictRedis(host="0.0.0.0", port=6379)
+	r = redis.StrictRedis(host="172.17.0.2", port=6379)
 	current_prime = str(r.get('current_prime'))
 	i = 2
 	if (int(current_prime) > 0):
