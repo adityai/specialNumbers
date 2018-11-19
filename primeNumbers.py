@@ -29,7 +29,7 @@ def main():
 
 def postToDashing(prime):
 	token = os.environ.get('AUTH_TOKEN')
-	url = 'https://iaditya.herokuapp.com/widgets/prime'
+	url = os.environ.get('DASHING_URL')
 	payload = '{ "auth_token": "%s" , "title": %s }' % (token, prime) 
 	headers = '{content-type: application/json}'
 	response = requests.post(url, data=payload)
